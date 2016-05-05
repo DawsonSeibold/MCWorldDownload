@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
         <head>
                 <meta charset="utf-8">
                 <link rel="stylesheet" type="text/css" href="main.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
                 <link rel="stylesheet" type="text/css" href="csshake.css">
                 <link rel="stylesheet" href="animate.css">
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+                <script type="text/javascript" src="youtube.js"></script>
                 <link rel="shortcut icon" href="photo.jpg" />
                 <title>World Downloads</title>
         </head>
         <header>
 
-                <div class="nav" >
+                <div class="nav stopScrolling" >
                     <ul class="animated  fadeInDown" id="navigationBar">
                       <li class="animated  flipInY" id="youtube" style="width: 210px; ">   <a href="https://www.youtube.com/channel/UCFKDEp9si4RmHFWJW1vYsMA" >Etho's Youtube</a>   </li>
                       <li class="animated  rubberBand" id="logo" style="width: 100px; "> <a href="https://www.youtube.com/channel/UCFKDEp9si4RmHFWJW1vYsMA" > <img id="ILogo" src="photo.jpg"> </a></li>
@@ -29,6 +30,8 @@
                             $("#development").on("click", function(event) {
                                   //window.location.assign("index.html")
                             });
+
+
                 </script>
                 </div>
 
@@ -46,19 +49,32 @@
 -->
         </header>
 
-        <body>
-                <!--
+        <body id="body">
+
                 <div class="background-image toggle-image first-image show"></div>
+<!--
                 <div class="background-image toggle-image second-image"></div>
                 <div class="background-image toggle-image third-image"></div>
 
 -->
+                <div id="scrollArea">
 
-                <div id="mainText">
+                        <div id="mainText">
 
-                <h2 class="animated  bounceInLeft" id="mendingTitle">Episode 450 World Download</h2>
-                <!-- <h1 class="animated  bounceInDown" id="soldBooksNum"><a href="world7.zip">Download!</a></h1> -->
-                 <button onclick="downloadClicked()" class="animated  bounceInDown" id="button"><h1  id="downloadButton">Download!</h1></button>
+                                <h2 class="animated  bounceInLeft" id="mendingTitle">Episode 450 World Download</h2>
+                                <!-- <h1 class="animated  bounceInDown" id="soldBooksNum"><a href="world7.zip">Download!</a></h1> -->
+                                 <button onclick="downloadClicked()" class="animated  bounceInDown" id="button"><h1  id="downloadButton">Download!</h1></button>
+
+                        </div>
+                        <p id="oldDownloadText">Older Downloads Coming Soon!<p>
+
+                         <div id="youtubeSection" style="display: none;" class="animated  fadeIn">
+                                 <h2 class="animated  bounceInLeft" id="">Latest Video</h2>
+                                 <hr>
+                                 <p id="video" class="animated  bounceInRight"></p>
+                                 <h2 class="animated  bounceInLeft" id="title"></h2>
+                         </div>
+
 
 <!--
                 <hr>
@@ -67,10 +83,13 @@
                 <h3  class="animated  bounceInUp" id="dimonadsMade">575</h3>
 -->
 
+
+
+
                 </div>
-                 <p><a> Older Downloads Coming Soon! </a><p>
                 <script>
                 $(function () {
+
                         //cycleBackgrounds();
                 });
 
