@@ -1,0 +1,300 @@
+a {
+        text-decoration: none;
+        color: white;
+}
+
+p {
+        color: white;
+}
+
+button {
+        //background-color: transparent;
+        //border: none;
+        height: auto;
+        width: auto;
+        border-radius: 10px;
+        background-color: white;
+}
+button:hover {
+        cursor: pointer;
+}
+
+#downloadButton {
+        padding: 0px;
+        margin: 0px;
+        color: white;
+
+}
+
+#button {
+        margin: auto;
+        background-color: #319BC2;
+}
+#button:hover {
+        width: +6;
+        background-color: #257691;
+}
+
+html {
+        width: 100%;
+        height: 100%;
+}
+
+body {
+        background-image: url("bgs/bg1.jpg");
+        height: 100vh;
+        background-size: cover;
+        margin-bottom: 50px;
+        //background-color:  red;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+}
+#mainText {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+
+}
+
+h1, h2{
+        //color: #a65cbe;
+        color: #319BC2;
+        border: white;
+        text-align: center;
+        font-size: 40px;
+        line-height: 40px;
+
+        //background-color:  purple;
+}
+
+h3 {
+        color: #51FFFF;
+        text-align: center;
+        font-size: 30px;
+}
+
+hr {
+        width: 25%;
+}
+
+footer {
+        //background-color: orange;
+        background-color: rgba(151,151,151,0.9);
+        margin: 0px;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+}
+
+#SLogoLeft {
+        width: 50px;
+        height: 50px;
+        padding-right: 50px;
+        padding-top: 6px;
+}
+
+#SLogoRight {
+        width: 50px;
+        height: 50px;
+        padding-left: 50px;
+        padding-top: 6px;
+}
+
+h5 {
+        color: black;
+        padding: 0px;
+        line-height: 25px;
+        margin: 5px;
+}
+
+footer:hover {
+        //margin: 10px;
+        font-size: 30px;
+}
+
+
+
+header {
+        //position: absolute;
+        //top: 20px;
+        //left: 30px;
+        //width:  20%;
+        //background-color: green;
+        //padding: 5px;
+}
+
+h4 {
+        //background-color: pink;
+        //position: absolute;
+        //display: inline-block;
+        font-size: 30px;
+        line-height: 30px;
+        //padding-left: 15px;
+        //padding-top: 29px;
+        //margin: auto;
+        color: white;
+        align-items: center;
+        vertical-align: middle;
+}
+
+#ILogo {
+        //padding: 5px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: solid 3px white;
+}
+.youtube {
+        padding: 5px;
+        border: solid 2px transparent;
+}
+.youtube:hover {
+        width: auto;
+        background-color: #8F8F8F;
+        border-radius: 15px;
+        border: solid 2px white;
+}
+
+
+
+
+/*Navigation Bar*/
+.nav ul {
+  //background-color: orange;
+  background-color: rgba(151,151,151,0.5);
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 9999999;
+
+}
+.nav li {
+//background-color: purple;
+
+  display: inline-block;
+  //width: 250px;
+  height: 60px;
+  line-height: 60px;
+ // margin: 0px;
+ // padding: 0px;
+  padding-top: 4px;
+  font-size: 20px;
+
+
+  text-align: center;
+  //padding-left: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#youtube {
+
+//background-color: pink;
+        -webkit-animation-delay: 0.5s;
+
+}
+#twitter {
+        float: right;
+//        margin-right: 85px;
+        text-align: center;
+        -webkit-animation-delay: 0.5s;
+}
+#logo {
+        position: absolute;
+        left: calc(50% - 3%);
+        -webkit-animation-delay: 0.5s;
+}
+.nav li a {
+  text-decoration: none;
+ color: white;
+
+
+ //background-color: green;
+}
+.nav li:hover {
+  //border-left: 1px solid #ccc;
+  //border-right: 1px solid #ccc;
+  background-color: #525252;
+}
+
+
+
+/* background Change thing */
+
+
+/* Styles for the alternating / transition effect. */
+.toggle-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Basic background image styling. */
+.background-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Styles for the alternating / transition effect. */
+.toggle-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+}
+
+/* Background image URLs and "stack" order. */
+.first-image {
+    background-image: url('bgs/bg1.jpg');
+    z-index: -3;
+    opacity: 0;
+}
+
+.second-image {
+    background-image: url('bgs/bg2.jpg');
+    z-index: -2;
+    opacity: 0;
+}
+
+.third-image {
+        background-image: url('bgs/bg2.jpg');
+        z-index: -1;
+        opacity: 0;
+}
+
+.first-image.show {
+    opacity: 1;
+}
+
+.second-image.show {
+    opacity: 1;
+}
+
+third-image.show {
+    opacity: 1;
+}

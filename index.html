@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="utf-8">
+                <link rel="stylesheet" type="text/css" href="main.css">
+                <link rel="stylesheet" type="text/css" href="csshake.css">
+                <link rel="stylesheet" href="animate.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+                <link rel="shortcut icon" href="photo.jpg" />
+                <title>World Downloads</title>
+        </head>
+        <header>
+
+                <div class="nav" >
+                    <ul class="animated  fadeInDown" id="navigationBar">
+                      <li class="animated  flipInY" id="youtube" style="width: 210px; ">   <a href="https://www.youtube.com/channel/UCFKDEp9si4RmHFWJW1vYsMA" >Etho's Youtube</a>   </li>
+                      <li class="animated  rubberBand" id="logo" style="width: 100px; "> <a href="https://www.youtube.com/channel/UCFKDEp9si4RmHFWJW1vYsMA" > <img id="ILogo" src="photo.jpg"> </a></li>
+                      <li class="animated flipInY"  id="twitter" style="width: 100px; "><a href="https://twitter.com/EthoLP" >Twitter</a></li>
+                      <script>
+
+                      </script>
+                    </ul>
+
+                <script type="text/javascript">
+                            $("#index").on("click", function(event) {
+                                  //window.location.assign("index.html")
+                            });
+
+                            $("#development").on("click", function(event) {
+                                  //window.location.assign("index.html")
+                            });
+                </script>
+                </div>
+
+                <!--
+                <div class="nav">
+                        <ul>
+                        <li><a href="https://www.youtube.com/user/impulseSV">
+                                <img src="photo.jpg">
+                                <h4>ImpulseSV's Youtube<h4>
+                        </li>
+                        <li> <h4>Twitter</h4> </li>
+                        </a>
+                </ul>
+                </div>
+-->
+        </header>
+
+        <body>
+                <!--
+                <div class="background-image toggle-image first-image show"></div>
+                <div class="background-image toggle-image second-image"></div>
+                <div class="background-image toggle-image third-image"></div>
+
+-->
+
+                <div id="mainText">
+
+                <h2 class="animated  bounceInLeft" id="mendingTitle">Episode 450 World Download</h2>
+                <!-- <h1 class="animated  bounceInDown" id="soldBooksNum"><a href="world7.zip">Download!</a></h1> -->
+                 <button onclick="downloadClicked()" class="animated  bounceInDown" id="button"><h1  id="downloadButton">Download!</h1></button>
+
+<!--
+                <hr>
+
+                <h3 class="animated  bounceInRight">Number of times downloaded:</h3>
+                <h3  class="animated  bounceInUp" id="dimonadsMade">575</h3>
+-->
+
+                </div>
+                 <p><a> Older Downloads Coming Soon! </a><p>
+                <script>
+                $(function () {
+                        //cycleBackgrounds();
+                });
+
+                function cycleBackgrounds() {
+                            var index = 0;
+
+                            $imageEls = $('.toggle-image'); // Get the images to be cycled.
+
+                            setInterval(function () {
+                                // Get the next index.  If at end, restart to the beginning.
+                                console.log("before: " + index);
+                                //index = index + 1
+                                if ( index < $imageEls.length ) {
+                                        index = index + 1
+                                }else {
+                                        index = 0
+                                }
+                                index  < $imageEls.length ? index + 1 : 0;
+                                console.log("after: "+ index);
+                                // Show the next image.
+                                $imageEls.eq(index).addClass('show');
+                                // Hide the previous image.
+                                $imageEls.eq(index - 1).removeClass('show');
+
+                        }, 20000000000); //2000
+                };
+
+                function downloadClicked(e) {
+                        //e.preventDefault();
+                        //window.location = 'worlds/world7.zip';
+                        window.location = 'http://www.minecraftworldmap.com/user/33948/world7.zip';
+                }
+
+                window.setInterval(bounceSmileText, 3000);
+                function bounceSmileText() {
+                        $('#smileText').animateCss('pulse');
+                 }
+
+                 window.setInterval(bounceLogo, 4500);
+                 function bounceLogo() {
+                         $('#logo').animateCss('swing');
+                  }
+
+                  window.setInterval(bounceDownloadButton, 4000);
+                  function bounceDownloadButton() {
+                          $('#downloadButton').animateCss('tada');
+                   }
+
+                $.fn.extend({
+                        animateCss: function (animationName) {
+                                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                                $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+                                        $(this).removeClass('animated ' + animationName);
+                                });
+                        }
+                });
+                </script>
+        </body>
+
+        <footer>
+                <img id="SLogoLeft" src="BLogo.png">
+                <div  class="animated  bounce" id="smileText">
+                        <a href="http://smileappdevelopment.weebly.com/">
+                                <h5>Created by Smile App Development</h5>
+                                <h5>Learn More!</h5>
+                        </a>
+                </div>
+                <img id="SLogoRight" src="BLogo.png">
+        </footer>
+</html>
