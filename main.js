@@ -1,7 +1,19 @@
 var origanalMarginTop = 0;
 var hideFooter = false
+var myCookie = false
 
 $(function() {
+
+        var cookie = document.cookie;
+         if (cookie.indexOf("yes") > -1)  {
+                 myCookie = true
+                 $('#olderDownloads').css('display', 'block');
+                 $('#showOldDownloads').css('display', 'none');
+                 $('#mainText').css('margin-top', '5px');
+        }else {
+                 myCookie = false
+        }
+
         origanalMarginTop = $('#mainText').css("margin-top").replace("px", "");
         console.log("Height: "+ document.getElementById("mainText").offsetHeight );
         var oldDiv = $('#olderDownloads');
@@ -28,12 +40,14 @@ function openMenu() {
         $('#showOldDownloads').css('display', 'none');
         $('#mainText').css('margin-top', '5px');
 
+
         console.log("test: "+ $('#html').css('height').replace("px", "") );
         if ($('#html').css('height').replace("px", "") <= 850) {
                 $('#footer').fadeToggle();
                 $('#footer').css('display', 'none');
                 hideFooter = true;
         }
+        document.cookie = "menuOpen=yes";
 }
 
 function closeMenu() {
@@ -46,6 +60,7 @@ function closeMenu() {
                 $('#footer').css('display', 'flex');
                 hideFooter = false;
         }
+        document.cookie = "menuOpen=no";
 }
 
 function myMove() {

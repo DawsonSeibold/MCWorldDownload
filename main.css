@@ -3,9 +3,11 @@ html {
                 height: 800px;
                 margin: 0;
                 padding: 0;
-                overflow: hidden;
+                overflow-y: hidden;
+                overflow-x: hidden;
                 background-color: gray;
 }
+
 
 #liveBanner {
         background-color: #F3534A;
@@ -256,6 +258,12 @@ align-items: center;
         font-size: 15px;
         color: gray;
         padding-top: 0px;
+}
+#bottomMessage {
+        font-size: 15px;
+        color: gray;
+        padding-top: 0px;
+        margin: 0px;
 }
 #olderDownloads button {
         font-size: 30px;

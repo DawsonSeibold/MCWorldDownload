@@ -53,22 +53,11 @@
 
                                     console.log("Show Banner");
                                      $('#liveBannerText').html('Enjoying our website? Tell Us! Click to tweet. #EthosWorldDownload');
-                                    window.setInterval(showBanner, 1500);
+                                    window.setInterval(showBanner, 2500);
                             }
-                            /*
-                            var imageRandomNumber = Math.floor((Math.random() * 3) + 1);
-                            console.log("r: " + imageRandomNumber);
-                            if (imageRandomNumber == 1) {
-                                    console.log("1");
-                                    $('#first').addClass('show');
-                            }else if (imageRandomNumber == 2) {
-                                    console.log("2");
-                                    $('#second').addClass('show');
-                            }else if (imageRandomNumber == 3) {
-                                    console.log("3");
-                                    $('#forth').addClass('show');
-                            }
-                            */
+
+
+
                         //    }
                         //    }else {
                         //            $('#liveBanner').css('display', 'hidden');
@@ -111,7 +100,7 @@
 
         <body id="body">
 
-                <div id="first" class="background-image toggle-image first-image show"></div>
+                <div id="first" class="background-image toggle-image first-image"></div>
                 <div id="second" class="background-image toggle-image second-image"></div>
                 <div id="forth" class="background-image toggle-image forth-image"></div>
         <!--        <div class="background-image toggle-image third-image "></div>
@@ -149,6 +138,9 @@
                                                         <a href="http://www.minecraftworldmap.com/user/33948/world2.zip"><button onclick="downloadClicked()" class="animated  fadeInLeft" id="Obutton"><h1  id="downloadButton">Download</h1></button></a>
                                                        <p id="date" class="animated  flipInY">4/7/2013</p>
                                               </li>
+                                              <li>
+                                                      <p id="bottomMessage" class="animated  flipInY">This menu works best on Google Chrome!</p>
+                                              </li>
                                    </ul>
                                  </div>
 
@@ -176,6 +168,24 @@
                 </div>
                 <script>
                 $(function () {
+
+                        var imageRandomNumber = Math.floor((Math.random() * 3) + 1);
+                        console.log("r: " + imageRandomNumber);
+                        if (imageRandomNumber == 1) {
+                                console.log("1");
+                                $('.first-image').addClass('show');
+                        }else if (imageRandomNumber == 2) {
+                                console.log("2");
+                                $('#second-image').addClass('show');
+                        }else if (imageRandomNumber == 3) {
+                                console.log("3");
+                                $('#forth-image').addClass('show');
+                        }
+
+                        $imageEls = $('.toggle-image'); // Get the images to be cycled.
+
+                            // Show the next image.
+                           $imageEls.eq(imageRandomNumber-1).addClass('show');
 
                         cycleBackgrounds();
                 });
