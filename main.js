@@ -6,7 +6,7 @@ $(function() {
 
         console.log("Title: "+ window.navigator.userAgent);
         var title = window.navigator.userAgent
-        if (title.indexOf("Safari")> -1) {
+        if (title.indexOf("Safari")> -1 && title.indexOf("Chrome") == -1) {
                 alert("Our website does not work very good with Safari.  Google Chrome works great tho! We apologize for any inconveniences this may have caused you.");
         }
         var title = window.navigator.userAgent
