@@ -4,6 +4,16 @@ var myCookie = false
 
 $(function() {
 
+        console.log("Title: "+ window.navigator.userAgent);
+        var title = window.navigator.userAgent
+        if (title.indexOf("Safari")> -1) {
+                alert("Our website does not work very good with Safari.  Google Chrome works great tho! We apologize for any inconveniences this may have caused you.");
+        }
+        var title = window.navigator.userAgent
+        if (title.indexOf("Firefox")> -1) {
+                alert("Some animations do not work on Firefox, we apologize. Google Chrome works tho!");
+        }
+
         var cookie = document.cookie;
          if (cookie.indexOf("yes") > -1)  {
                  myCookie = true
