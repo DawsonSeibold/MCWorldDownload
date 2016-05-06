@@ -7,12 +7,13 @@
                 <link rel="stylesheet" type="text/css" href="csshake.css">
                 <link rel="stylesheet" href="animate.css">
                 <script type="text/javascript" src="youtube.js"></script>
+                <script type="text/javascript" src="main.js"></script>
                 <link rel="shortcut icon" href="photo.jpg" />
                 <title>World Downloads</title>
         </head>
         <header>
 
-                <div class="nav stopScrolling" >
+                <div class="nav" >
                     <ul class="animated  fadeInDown" id="navigationBar">
                       <li class="animated  flipInY" id="youtube" style="width: 210px; ">   <a href="https://www.youtube.com/channel/UCFKDEp9si4RmHFWJW1vYsMA" >Etho's Youtube</a>   </li>
                       <li class="animated  rubberBand" id="logo" style="width: 100px; "> <a href="https://www.youtube.com/channel/UCFKDEp9si4RmHFWJW1vYsMA" > <img id="ILogo" src="photo.jpg"> </a></li>
@@ -63,16 +64,43 @@
 
                                 <h2 class="animated  bounceInLeft" id="mendingTitle">Episode 450 World Download</h2>
                                 <!-- <h1 class="animated  bounceInDown" id="soldBooksNum"><a href="world7.zip">Download!</a></h1> -->
-                                 <button onclick="downloadClicked()" class="animated  bounceInDown" id="button"><h1  id="downloadButton">Download!</h1></button>
+                                 <a href="http://www.minecraftworldmap.com/user/33948/world7.zip"><button  class="animated  bounceInDown" id="button"><h1  id="downloadButton">Download!</h1></button></a>
+
+                                 <p id="showOldDownloads">Show Older Downloads</p>
+
+                                 <div id="olderDownloads" class="animated bounceInDown">
+                                         <p id="closeTap">Close</p>
+                                         <ul id="oldDownloadUl">
+                                                 <li>
+                                                         <h2 class="animated  flipInX" id="mendingTitle" >Episode 364 World Download</h2>
+                                                          <a href="http://www.minecraftworldmap.com/user/33948/world5.zip"><button onclick="downloadClicked()" class="animated  fadeInLeft" id="Obutton"><h1  id="downloadButton">Download</h1></button></a>
+                                                         <p id="date" class="animated  flipInY">9/4/2014</p>
+                                                         <hr>
+                                                </li>
+
+                                                <li>
+                                                        <h2 class="animated  flipInX" id="mendingTitle">Episode 302 World Download</h2>
+                                                         <a href="http://www.minecraftworldmap.com/user/33948/world4.zip"><button onclick="downloadClicked()" class="animated  fadeInRight" id="Obutton"><h1  id="downloadButton">Download</h1></button></a>
+                                                        <p id="date" class="animated  flipInY">10/31/2013</p>
+                                                        <hr>
+                                               </li>
+
+                                               <li>
+                                                       <h2 class="animated  flipInX" id="mendingTitle">Episode 264 World Download</h2>
+                                                        <a href="http://www.minecraftworldmap.com/user/33948/world2.zip"><button onclick="downloadClicked()" class="animated  fadeInLeft" id="Obutton"><h1  id="downloadButton">Download</h1></button></a>
+                                                       <p id="date" class="animated  flipInY">4/7/2013</p>
+                                              </li>
+                                   </ul>
+                                 </div>
 
                         </div>
-                        <p id="oldDownloadText">Older Downloads Coming Soon!<p>
 
-                         <div id="youtubeSection" style="display: none;" class="animated  fadeIn">
-                                 <h2 class="animated  bounceInLeft" id="">Latest Video</h2>
+
+                         <div id="youtubeSection" style="display: none;" class="animatedParent" data-sequence="1000'">
+                                 <h2 class="animated  bounceInLeft" id="" data-id="1">Latest Video</h2>
                                  <hr>
-                                 <p id="video" class="animated  bounceInRight"></p>
-                                 <h2 class="animated  bounceInLeft" id="title"></h2>
+                                 <p id="video" class="animated  bounceInRight" data-id="2"></p>
+                                 <h2 class="animated  bounceInLeft" id="title" data-id="3"></h2>
                          </div>
 
 
@@ -120,7 +148,7 @@
                 function downloadClicked(e) {
                         //e.preventDefault();
                         //window.location = 'worlds/world7.zip';
-                        window.location = 'http://www.minecraftworldmap.com/user/33948/world7.zip';
+                        //window.location = 'http://www.minecraftworldmap.com/user/33948/world7.zip';
                 }
 
                 window.setInterval(bounceSmileText, 3000);

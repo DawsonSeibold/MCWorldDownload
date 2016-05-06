@@ -3,7 +3,8 @@ html {
                 height: 800px;
                 margin: 0;
                 padding: 0;
-                //overflow: hidden;
+                overflow: hidden;
+                background-color: gray;
 }
 
 /*Navigation Bar*/
@@ -167,8 +168,81 @@ button:hover {
         flex-direction: column;
         align-items: center;
         //z-index: 5;
+        margin-bottom: calc(100% / 2 + 100px);
 
 }
+#showOldDownloads {
+        font-size: 17px;
+        text-align: center;
+        //margin: 10px;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        color: black;
+        //background-color: pink;
+}
+#showOldDownloads:hover {
+        cursor: pointer;
+}
+
+#olderDownloads {
+        display: none;
+        background-color: white;
+        border: solid 2px gray;
+        border-radius: 10px;
+        margin-top: 20px;
+}
+#closeTap {
+        text-align: center;
+        line-height: 30px;
+        background-color: #F3534A;
+        color: white;
+        height: 30px;
+        margin-top: 0px;
+        border-radius: 8px;
+}
+#closeTap:hover {
+        cursor: pointer;
+}
+#olderDownloads ul {
+list-style: none;
+//background-color: pink;
+padding: 0px;
+}
+#olderDownloads li {
+//        background-color: purple;
+
+
+
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#olderDownloads hr {
+        width: calc(100% /2);
+}
+#olderDownloads h1 {
+        font-size: 24px;
+        line-height: 40px;
+}
+#olderDownloads h2 {
+        font-size: 24px;
+        padding-left: 50px;
+        padding-right: 50px;
+}
+#date  {
+        font-size: 15px;
+        color: gray;
+        padding-top: 0px;
+}
+#olderDownloads button {
+        font-size: 30px;
+        width: 129px;
+        height: 40px;
+        background-color: #F3534A;
+}
+
+
 
 #youtubeSection {
         background-color: rgba(255, 255, 255, 0.8);
@@ -189,12 +263,6 @@ button:hover {
         margin-bottom: 0px;
         padding-bottom: 0px;
         margin-top: 1px;
-}
-#oldDownloadText {
-        text-align: center;
-        margin: 0px;
-        padding-top: 5px;
-        margin-bottom: calc(100% / 2 + 100px);
 }
 
 footer {
