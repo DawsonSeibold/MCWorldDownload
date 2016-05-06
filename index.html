@@ -13,6 +13,8 @@
         </head>
         <header>
 
+                <a  class="animated lightSpeedIn" id="liveBanner"  style="display: none;" target="_blank" href="http://ctt.ec/wTL7e"><p id="liveBannerText">ImpulseSV is Live Right Now! Watch Now!</p></a>
+
                 <div class="nav" >
                     <ul class="animated  fadeInDown" id="navigationBar">
                       <li class="animated  flipInY" id="youtube" style="width: 210px; ">   <a href="https://www.youtube.com/channel/UCFKDEp9si4RmHFWJW1vYsMA" >Etho's Youtube</a>   </li>
@@ -32,7 +34,50 @@
                                   //window.location.assign("index.html")
                             });
 
+                           // var theTime = new Date();
+                            //var theWeekday = theTime.getDay();
+                            //var theHour = theTime.getHours();
+                            //var theMinutes = theTime.getMinutes();
+                            //console.log("Hour: " + theHour + 'min: ' + theMinutes +' Day: ' + theWeekday);
+                            //if (theWeekday == 5) {
+                            //if (theHour >= 1 && theHour <= 24) {
+                        //            if (theMinutes <= 30) {
+                        //                    console.log("Show Pre Banner");
+                        //                    var timeTillStream  = 30 - theMinutes
+                        //                    $('#liveBannerText').html('ImpulseSV Goes Live In About ' + timeTillStream + ' Minutes! Click Here To Watch!');
+                        //                    window.setInterval(showBanner, 1500);
+                        //            }else {
+                        var randomNumber = Math.floor((Math.random() * 10) + 1);
+                        console.log("random: "+ randomNumber + ", Equals: "+ randomNumber % 2);
+                        if (randomNumber % 2 == 0) {
 
+                                    console.log("Show Banner");
+                                     $('#liveBannerText').html('Enjoying our website? Tell Us! Click to tweet. #EthosWorldDownload');
+                                    window.setInterval(showBanner, 1500);
+                            }
+                        //    }
+                        //    }else {
+                        //            $('#liveBanner').css('display', 'hidden');
+                        //            $('#liveBanner').css('top', '-10px');
+                        //            $('#navigationBar').css('top', "0");
+                         //   }
+                    //}else {
+                        //    $('#liveBanner').css('display', 'hidden');
+                         //   $('#liveBanner').css('top', '-10px');
+                         //   $('#navigationBar').css('top', "0");
+                    //}
+
+                    function showBanner() {
+                            $('#liveBanner').css('display', 'inline-block');
+                            $('#liveBanner').css('top', '-10px');
+                            $('#navigationBar').css('top',  '51px');
+
+                    }
+
+                    if ($('#html').css('height').replace("px", "") <= 850) {
+                           $('#mainText').css('margin-top', 'calc(100%  / 5)');
+                            console.log("GOOD");
+                    }
                 </script>
                 </div>
 
@@ -177,7 +222,7 @@
                 </script>
         </body>
 
-        <footer>
+        <footer id="footer">
                 <img id="SLogoLeft" src="BLogo.png">
                 <div  class="animated  bounce" id="smileText">
                         <a href="http://smileappdevelopment.weebly.com/">

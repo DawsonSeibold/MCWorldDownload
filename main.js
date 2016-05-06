@@ -1,4 +1,5 @@
 var origanalMarginTop = 0;
+var hideFooter = false
 
 $(function() {
         origanalMarginTop = $('#mainText').css("margin-top").replace("px", "");
@@ -24,9 +25,15 @@ $(function() {
 
 function openMenu() {
         $('#olderDownloads').css('display', 'block');
-
         $('#showOldDownloads').css('display', 'none');
         $('#mainText').css('margin-top', '5px');
+
+        console.log("test: "+ $('#html').css('height').replace("px", "") );
+        if ($('#html').css('height').replace("px", "") <= 850) {
+                $('#footer').fadeToggle();
+                $('#footer').css('display', 'none');
+                hideFooter = true;
+        }
 }
 
 function closeMenu() {
@@ -34,6 +41,11 @@ function closeMenu() {
         $('#showOldDownloads').css('display', 'inline-block');
         $('#mainText').css('margin-top', 'calc(100%  / 2)');
         $('#mainText').css('height', 'auto');
+
+        if (hideFooter == true) {
+                $('#footer').css('display', 'flex');
+                hideFooter = false;
+        }
 }
 
 function myMove() {

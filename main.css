@@ -7,6 +7,28 @@ html {
                 background-color: gray;
 }
 
+#liveBanner {
+        background-color: #F3534A;
+        width: 100%;
+        height: 60px;
+        margin: auto;
+        padding: 0px;
+        position: fixed;
+        top: -10px;
+        left: 0px;
+
+        color: black;
+        text-align: center;
+        font-size: 25px;
+        line-height: 20px;
+        vertical-align: middle;
+        z-index: 100;
+}
+#liveBanner p {
+        color: white;
+}
+
+
 /*Navigation Bar*/
 .nav ul {
   //background-color: orange;
