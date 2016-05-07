@@ -24,7 +24,7 @@ $(function() {
        $("#youtubeSection").css('display', 'flex');
 
        var timer = setInterval(function () {
-                    $('#html').css('overflow-y', 'scroll');
+                    $('#html').css('overflow-y', 'auto');
                     clearInterval(timer)   }, 20);
             }
     };
