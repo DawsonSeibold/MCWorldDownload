@@ -33,7 +33,7 @@ $(function() {
 });
 
 function checkHelpThing() {
-        ocument.cookie = "menuOpen=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        document.cookie = "menuOpen=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
         var cookie = document.cookie;
          if (cookie.indexOf("downloaded") > -1)  {
                  myCookie = false
