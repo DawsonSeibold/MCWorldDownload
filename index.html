@@ -82,8 +82,6 @@
                         //                    $('#liveBannerText').html('ImpulseSV Goes Live In About ' + timeTillStream + ' Minutes! Click Here To Watch!');
                         //                    window.setInterval(showBanner, 1500);
                         //            }else {
-                        randomiseBanner();
-                        function randomiseBanner () {
                         var randomNumber = Math.floor((Math.random() * 10) + 1);
                         console.log("random: "+ randomNumber + ", Equals: "+ randomNumber % 2);
                         if (randomNumber % 2 == 0) {
@@ -98,11 +96,10 @@
                                 console.log("Show OTHER Banner");
                                 $('#liveBannerText').html('Have a suggestion to make this site better? Click To Tell Us! #EthosWorldDownload');
                                 $('#liveBanner').attr('href', 'http://ctt.ec/695M9')
-                                $('#liveBanner').css('background-color', 'green'); //#EA2663
+                                $('#liveBanner').css('background-color', '#EA2663'); //#EA2663
                                 $('#liveBanner').css('color', 'white');
                                window.setInterval(showBanner, 2500);
                        };
-};
 
 
                         //    }
