@@ -78,17 +78,17 @@ class SideNav {
 
   downloadOne() {
           window.location = 'http://www.minecraftworldmap.com/user/33948/world5.zip'
-          //document.cookie = "help=downloaded";
+          document.cookie = "help=downloaded";
            $('#helpLI').css('display', 'none');
          // console.log("Download One");
   }downloadTwo(){
           window.location = 'http://www.minecraftworldmap.com/user/33948/world4.zip'
-          //document.cookie = "help=downloaded";
+          document.cookie = "help=downloaded";
            $('#helpLI').css('display', 'none');
          // console.log("Download Two");
   }downloadThree() {
           window.location = 'http://www.minecraftworldmap.com/user/33948/world2.zip'
-         // document.cookie = "help=downloaded";
+          document.cookie = "help=downloaded";
            $('#helpLI').css('display', 'none');
           //console.log('Download Three');
   }
