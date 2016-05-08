@@ -15,9 +15,20 @@
  * limitations under the License.
  */
 
-'use strict';
+//'use strict';
 var showHelp = true
 $(function() {
+
+        //console.log("Title: "+ window.navigator.userAgent);
+        var title = window.navigator.userAgent
+        if (title.indexOf("Safari")> -1 && title.indexOf("Chrome") == -1) {
+               // alert("Our website does not work very good with Safari.  Google Chrome works great tho! We apologize for any inconveniences this may have caused you.");
+        }
+        var title = window.navigator.userAgent
+        if (title.indexOf("Firefox")> -1) {
+                alert("Older downloads dont work in Firefox versions 44 and below.");
+        }
+
         checkHelpThing();
 });
 
@@ -106,7 +117,7 @@ class SideNav {
 
   onTouchMove (evt) {
     this.currentX = evt.touches[0].pageX;
-    const translateX = Math.min(0, this.currentX - this.startX);
+     translateX = Math.min(0, this.currentX - this.startX);
 
     if (translateX < 0) {
       evt.preventDefault();
@@ -116,7 +127,7 @@ class SideNav {
   onTouchEnd (evt) {
     this.touchingSideNav = false;
 
-    const translateX = Math.min(0, this.currentX - this.startX);
+     translateX = Math.min(0, this.currentX - this.startX);
     this.sideNavContainerEl.style.transform = '';
 
     if (translateX < 0) {
@@ -131,7 +142,7 @@ class SideNav {
     if (this.touchingSideNav)
       requestAnimationFrame(this.update);
 
-    const translateX = Math.min(0, this.currentX - this.startX);
+     translateX = Math.min(0, this.currentX - this.startX);
     this.sideNavContainerEl.style.transform = `translateX(${translateX}px)`;
   }
 

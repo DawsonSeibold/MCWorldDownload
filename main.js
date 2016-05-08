@@ -1,8 +1,8 @@
-/*
-var origanalMarginTop = 0;
-var hideFooter = false
-var myCookie = false
 
+//var origanalMarginTop = 0;
+//var hideFooter = false
+//var myCookie = false
+/*
 $(function() {
 
         console.log("Title: "+ window.navigator.userAgent);
@@ -14,6 +14,8 @@ $(function() {
         if (title.indexOf("Firefox")> -1) {
                 alert("Some animations do not work on Firefox, we apologize. Google Chrome works tho!");
         }
+}
+
 
         var cookie = document.cookie;
          if (cookie.indexOf("yes") > -1)  {
@@ -150,7 +152,7 @@ function expand() {
 
 
 
-*/
+
 
 $.fn.extend({
         animateCss: function (animationName) {
@@ -160,3 +162,5 @@ $.fn.extend({
                 });
         }
 });
+
+*/
