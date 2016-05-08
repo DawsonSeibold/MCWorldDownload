@@ -4,14 +4,49 @@
                 <meta charset="utf-8">
                 <link rel="stylesheet" type="text/css" href="main.css">
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
                 <link rel="stylesheet" type="text/css" href="csshake.css">
                 <link rel="stylesheet" href="animate.css">
+                <!--  SIDE BAR-->
+
+                <link rel="stylesheet" href="styles.css">
                 <script type="text/javascript" src="youtube.js"></script>
                 <script type="text/javascript" src="main.js"></script>
                 <link rel="shortcut icon" href="photo.jpg" />
                 <title>World Downloads</title>
         </head>
         <header>
+
+                <aside class="js-side-nav side-nav">
+                  <nav class="js-side-nav-container side-nav__container">
+                    <button class="js-menu-hide side-nav__hide material-icons">close</button>  <!-- Took Off            side-nav__hide material-icons -->
+                    <header class="side-nav__header">
+                      Older Downloads
+                    </header>
+                    <ul class="side-nav__content">
+                           <li id="helpLI" style="height: 74px; text-align: center; font-size: 20px; padding-left: 0px; cursor: default;">
+                                   <h5>Click on one of the section below to <br> download  a world!</h5>
+                           </li>
+                      <li id="one">
+                              <text>Episode 364 World Download</text>
+                              <br>
+                              <text id="date">9/4/2014</text>
+                      </li>
+                      <li id="two">
+                              <text>Episode 302 World Download</text>
+                              <br>
+                              <text id="date">10/31/2013</text>
+                      </li>
+                      <li id="three">
+                              <text>Episode 264 World Download</text>
+                              <br>
+                              <text id="date">4/7/2013</text>
+                      </li>
+
+                 </ul>
+                </nav>
+                </aside>
+
 
                 <a  class="animated lightSpeedIn" id="liveBanner"  style="display: none;" target="_blank" href="http://ctt.ec/wTL7e"><p id="liveBannerText">ImpulseSV is Live Right Now! Watch Now!</p></a>
 
@@ -79,7 +114,6 @@
 
                     if ($('#html').css('height').replace("px", "") <= 850) {
                            $('#mainText').css('margin-top', 'calc(100%  / 5)');
-                            console.log("GOOD");
                     }
                 </script>
                 </div>
@@ -98,6 +132,8 @@
 -->
         </header>
 
+
+
         <body id="body">
 
                 <div id="first" class="background-image toggle-image first-image"></div>
@@ -114,7 +150,7 @@
                                 <!-- <h1 class="animated  bounceInDown" id="soldBooksNum"><a href="world7.zip">Download!</a></h1> -->
                                  <a href="http://www.minecraftworldmap.com/user/33948/world7.zip"><button  class="animated  bounceInDown" id="button"><h1  id="downloadButton">Download!</h1></button></a>
 
-                                 <p id="showOldDownloads">Show Older Downloads</p>
+                                 <p id="showOldDownloads" class="js-menu-show ">Show Older Downloads</p> <!-- Took Off                  header__menu-toggle material-icons -->
 
                                  <div id="olderDownloads" class="animated bounceInDown">
                                          <p id="closeTap">Close</p>
@@ -242,7 +278,12 @@
                         }
                 });
                 </script>
+
+
+        <script type="text/javascript" src="./side-nav.js"></script>
         </body>
+
+
 
         <footer id="footer">
                 <img id="SLogoLeft" src="BLogo.png">

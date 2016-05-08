@@ -1,3 +1,4 @@
+/*
 var origanalMarginTop = 0;
 var hideFooter = false
 var myCookie = false
@@ -149,7 +150,7 @@ function expand() {
 
 
 
-
+*/
 
 $.fn.extend({
         animateCss: function (animationName) {
